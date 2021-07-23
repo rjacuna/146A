@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{sagetex}
+
+\usepackage{euler}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+
+
+\usepackage[makeroom]{cancel}
+\usepackage{ulem}
+
+\setlength\parindent{0em}
+\setlength\parskip{0.618em}
+\usepackage[a4paper,lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+
+\setmainfont[Mapping=tex-text]{Helvetica Neue LT Std 45 Light}
+
+\newcommand\N{\mathbb{N}}
+\newcommand\Z{\mathbb{Z}}
+\newcommand\R{\mathbb{R}}
+\newcommand\A{\mathbb{A}}
+
+\begin{document}
+
+\begin{center}
+  146A---5
+
+  Ricardo J. Acuna
+
+  (862079740)
+\end{center}\vspace{1.618em}
+
+\[\int_0^\infty x^2 +y^2 dxdy\]
+
+Using Sage\TeX, one can use Sage to compute things and put them into
+your \LaTeX{} document. For example, there are
+$\sage{number_of_partitions(5)}$ integer partitions of $5$.
+You don't need to compute the number yourself, or even cut and paste
+it from somewhere.
+
+Here's some Sage code:
+
+\begin{sageblock}
+    f(x) = exp(x) * sin(2*x)
+\end{sageblock}
+
+The second derivative of $f$ is
+
+\[
+  \frac{\mathrm{d}^{2}}{\mathrm{d}x^{2}} \sage{f(x)} =
+  \sage{diff(f, x, 2)(x)}.
+\]
+
+Here's a plot of $f$ from $-1$ to $1$:
+
+\sageplot{plot(f, -1, 1)}Using Sage\TeX, one can use Sage to compute things and put them into
+your \LaTeX{} document.
+
+\end{document}
